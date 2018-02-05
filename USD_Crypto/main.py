@@ -14,8 +14,7 @@ def get_data(crypto):
 
 
 if __name__ == "__main__":
-    for currency in get_files():
-        print currency
-        crypto = Crypto.Currency(currency)
+    wallet = Crypto.Wallet([Crypto.Currency(currency) for currency in get_files()])
+    for crypto in wallet.crypto:
         get_data(crypto)
     exit(0)

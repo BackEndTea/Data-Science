@@ -10,3 +10,9 @@ class Currency:
             self.data = [row for row in csv_reader]
 
         pass
+
+class Wallet:
+
+    def __init__(self, cryptos):
+        self.crypto = cryptos
+        pass
